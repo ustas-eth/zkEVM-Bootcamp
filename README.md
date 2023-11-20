@@ -1,2 +1,2 @@
-# zkEVM-Bootcamp
-My homework and notes on zkEVM Bootcamp by zkSync and Encode Club
+# [zkEVM Bootcamp](https://www.encode.club/zksync-zkevm-bootcamp)
+This repo contains my solutions to the homework assigned in the bootcamp.
