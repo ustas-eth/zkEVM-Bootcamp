@@ -1,0 +1,238 @@
+
+# VARIABLES
+
+[[exercises]]
+name = "variables1"
+path = "homeworks/homework3/variables/variables1.rs"
+mode = "compile"
+hint = """
+Hint: The declaration on line 12 is missing a keyword that is needed in Rust
+to create a new variable binding."""
+
+[[exercises]]
+name = "variables2"
+path = "homeworks/homework3/variables/variables2.rs"
+mode = "compile"
+hint = """
+The compiler message is saying that Rust cannot infer the type that the
+variable binding `x` has with what is given here.
+What happens if you annotate line 7 with a type annotation?
+What if you give x a value?
+What if you do both?
+What type should x be, anyway?
+What if x is the same type as 10? What if it's a different type?"""
+
+[[exercises]]
+name = "variables3"
+path = "homeworks/homework3/variables/variables3.rs"
+mode = "compile"
+hint = """
+In Rust, variable bindings are immutable by default. But here we're trying
+to reassign a different value to x! There's a keyword we can use to make
+a variable binding mutable instead."""
+
+[[exercises]]
+name = "variables4"
+path = "homeworks/homework3/variables/variables4.rs"
+mode = "compile"
+hint = """
+Oops! In this exercise, we have a variable binding that we've created on
+line 7, and we're trying to use it on line 8, but we haven't given it a
+value. We can't print out something that isn't there; try giving x a value!
+This is an error that can cause bugs that's very easy to make in any
+programming language -- thankfully the Rust compiler has caught this for us!"""
+
+[[exercises]]
+name = "variables5"
+path = "homeworks/homework3/variables/variables5.rs"
+mode = "compile"
+hint = """
+In variables3 we already learned how to make an immutable variable mutable
+using a special keyword. Unfortunately this doesn't help us much in this exercise
+because we want to assign a different typed value to an existing variable. Sometimes
+you may also like to reuse existing variable names because you are just converting
+values to different types like in this exercise.
+Fortunately Rust has a powerful solution to this problem: 'Shadowing'!
+You can read more about 'Shadowing' in the book's section 'Variables and Mutability':
+https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#shadowing
+Try to solve this exercise afterwards using this technique."""
+
+[[exercises]]
+name = "variables6"
+path = "homeworks/homework3/variables/variables6.rs"
+mode = "compile"
+hint = """
+We know about variables and mutability, but there is another important type of
+variable available; constants.
+Constants are always immutable and they are declared with keyword 'const' rather
+than keyword 'let'.
+Constants types must also always be annotated.
+
+Read more about constants under 'Differences Between Variables and Constants' in the book's section 'Variables and Mutability':
+https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#differences-between-variables-and-constants
+"""
+
+# FUNCTIONS
+
+[[exercises]]
+name = "functions1"
+path = "homeworks/homework3/functions/functions1.rs"
+mode = "compile"
+hint = """
+This main function is calling a function that it expects to exist, but the
+function doesn't exist. It expects this function to have the name `call_me`.
+It expects this function to not take any arguments and not return a value.
+Sounds a lot like `main`, doesn't it?"""
+
+[[exercises]]
+name = "functions2"
+path = "homeworks/homework3/functions/functions2.rs"
+mode = "compile"
+hint = """
+Rust requires that all parts of a function's signature have type annotations,
+but `call_me` is missing the type annotation of `num`."""
+
+[[exercises]]
+name = "functions3"
+path = "homeworks/homework3/functions/functions3.rs"
+mode = "compile"
+hint = """
+This time, the function *declaration* is okay, but there's something wrong
+with the place where we're calling the function."""
+
+[[exercises]]
+name = "functions4"
+path = "homeworks/homework3/functions/functions4.rs"
+mode = "compile"
+hint = """
+The error message points to line 14 and says it expects a type after the
+`->`. This is where the function's return type should be-- take a look at
+the `is_even` function for an example!"""
+
+[[exercises]]
+name = "functions5"
+path = "homeworks/homework3/functions/functions5.rs"
+mode = "compile"
+hint = """
+This is a really common error that can be fixed by removing one character.
+It happens because Rust distinguishes between expressions and statements: expressions return a value based on their operand(s), and statements simply return a () type which behaves just like `void` in C/C++ language.
+We want to return a value of `i32` type from the `square` function, but it is returning a `()` type...
+They are not the same. There are two solutions:
+1. Add a `return` ahead of `num * num;`
+2. remove `;`, make it to be `num * num`"""
+
+# IF
+
+[[exercises]]
+name = "if1"
+path = "homeworks/homework3/if/if1.rs"
+mode = "test"
+hint = """
+It's possible to do this in one line if you would like!
+Some similar examples from other languages:
+- In C(++) this would be: `a > b ? a : b`
+- In Python this would be:  `a if a > b else b`
+Remember in Rust that:
+- the `if` condition does not need to be surrounded by parentheses
+- `if`/`else` conditionals are expressions
+- Each condition is followed by a `{}` block."""
+
+[[exercises]]
+name = "if2"
+path = "homeworks/homework3/if/if2.rs"
+mode = "test"
+hint = """
+For that first compiler error, it's important in Rust that each conditional
+block return the same type! To get the tests passing, you will need a couple
+conditions checking different input values."""
+
+
+
+# PRIMITIVE TYPES
+
+[[exercises]]
+name = "primitive_types1"
+path = "homeworks/homework3/primitive_types/primitive_types1.rs"
+mode = "compile"
+hint = "No hints this time ;)"
+
+[[exercises]]
+name = "primitive_types2"
+path = "homeworks/homework3/primitive_types/primitive_types2.rs"
+mode = "compile"
+hint = "No hints this time ;)"
+
+[[exercises]]
+name = "primitive_types3"
+path = "homeworks/homework3/primitive_types/primitive_types3.rs"
+mode = "compile"
+hint = """
+There's a shorthand to initialize Arrays with a certain size that does not
+require you to type in 100 items (but you certainly can if you want!).
+For example, you can do:
+let array = ["Are we there yet?"; 10];
+
+Bonus: what are some other things you could have that would return true
+for `a.len() >= 100`?"""
+
+[[exercises]]
+name = "primitive_types4"
+path = "homeworks/homework3/primitive_types/primitive_types4.rs"
+mode = "test"
+hint = """
+Take a look at the Understanding Ownership -> Slices -> Other Slices section of the book:
+https://doc.rust-lang.org/book/ch04-03-slices.html
+and use the starting and ending indices of the items in the Array
+that you want to end up in the slice.
+
+If you're curious why the first argument of `assert_eq!` does not
+have an ampersand for a reference since the second argument is a
+reference, take a look at the Deref coercions section of the book:
+https://doc.rust-lang.org/book/ch15-02-deref.html"""
+
+[[exercises]]
+name = "primitive_types5"
+path = "homeworks/homework3/primitive_types/primitive_types5.rs"
+mode = "compile"
+hint = """
+Take a look at the Data Types -> The Tuple Type section of the book:
+https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type
+Particularly the part about destructuring (second to last example in the section).
+You'll need to make a pattern to bind `name` and `age` to the appropriate parts
+of the tuple. You can do it!!"""
+
+[[exercises]]
+name = "primitive_types6"
+path = "homeworks/homework3/primitive_types/primitive_types6.rs"
+mode = "test"
+hint = """
+While you could use a destructuring `let` for the tuple here, try
+indexing into it instead, as explained in the last example of the
+Data Types -> The Tuple Type section of the book:
+https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type
+Now you have another tool in your toolbox!"""
+
+
+# STRINGS
+
+[[exercises]]
+name = "strings1"
+path = "homeworks/homework3/strings/strings1.rs"
+mode = "compile"
+hint = """
+The `current_favorite_color` function is currently returning a string slice with the `'static`
+lifetime. We know this because the data of the string lives in our code itself -- it doesn't
+come from a file or user input or another program -- so it will live as long as our program
+lives. But it is still a string slice. There's one way to create a `String` by converting a
+string slice covered in the Strings chapter of the book, and another way that uses the `From`
+trait."""
+
+[[exercises]]
+name = "strings2"
+path = "homeworks/homework3/strings/strings2.rs"
+mode = "compile"
+hint = """
+Yes, it would be really easy to fix this by just changing the value bound to `word` to be a
+string slice instead of a `String`, wouldn't it?? There is a way to add one character to line
+9, though, that will coerce the `String` into a string slice."""
+

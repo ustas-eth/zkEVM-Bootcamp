@@ -1,0 +1,26 @@
+[package]
+name = "zustlings"
+version = "4.7.0"
+authors = ["mokou <mokou@fastmail.com>", "Carol (Nichols || Goulding) <carol.nichols@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+argh = "0.1.4"
+indicatif = "0.10.3"
+console = "0.7.7"
+notify = "4.0.15"
+toml = "0.4.10"
+regex = "1.1.6"
+serde = { version = "1.0.10", features = ["derive"] }
+
+[[bin]]
+name = "zustlings"
+path = "src/main.rs"
+
+[dev-dependencies]
+assert_cmd = "0.11.0"
+predicates = "1.0.1"
+glob = "0.3.0"
+
+[features]
+exercises = []
