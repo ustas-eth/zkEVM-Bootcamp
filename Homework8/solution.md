@@ -1,5 +1,8 @@
 ## Polynomial practice
-TODO
+$`p(x) = x^3 − 5x^2 − 4x + 20`$
+1. There are three roots: -2, 2, and 5
+2. $`(x + 2)(x^2 − 7x + 10)`$
+3. p(x) has the third degree and q(x) has the second
 
 ## Notes on the podcast
 It was awesome! Thank you, Ariel Gabizon.
