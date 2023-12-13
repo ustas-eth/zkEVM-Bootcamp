@@ -1,0 +1,1 @@
+I've seen the video before. A good one, I'd recommend this entire album to everyone who wants to learn zk-proofs.
