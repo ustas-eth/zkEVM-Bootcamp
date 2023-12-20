@@ -54,7 +54,7 @@ This repo contains my solutions to the homework assigned in the bootcamp and not
       - [Trace tables](#trace-tables)
       - [Fiat-Shamir heuristic](#fiat-shamir-heuristic)
   - [Day 17](#day-17)
-    - [SNARK implementation](#snark-implementation-1)
+    - [STARK implementation](#stark-implementation)
       - [Computation integrity](#computation-integrity)
       - [Reed-Solomon error correction](#reed-solomon-error-correction)
       - [FRI (Fast Reed-Solomon IOP of Proximity)](#fri-fast-reed-solomon-iop-of-proximity)
@@ -567,7 +567,7 @@ I recommend you to check the Wiki because it has quite an illustrative example.
 Similar to the keccak in smart contracts (permit signature), the Prover can manipulate parameters if they are not included in the hash.
 
 ## Day 17
-### SNARK implementation
+### STARK implementation
 STARKs, as was mentioned before, don't have toxic waste. This means we can make a transparent setup quick and easy. Also, they are quantum secure, but it is more like a nice topping. The fundamental security assumption of a STARK is a collision-resistant hash function, a well-known cryptographic primitive.
 
 Cairo VM (Starknet) uses AIR (arithmetic intermediate representation) arithmetization, in opposite to the popular R1CS.
