@@ -114,7 +114,7 @@ Laurence from Entropy made some key points about Layer 1 solutions:
 - TPS measures and marketing. Context is important when you see advertised parameters like TPS, because they vary widely in different contexts and may not be achievable in reality.
 - Popular blockchains like Ethereum and Bitcoin are much slower than traditional payment systems like Visa. While it is a fact, I think blockchains theoretically have more potential than traditional systems because they have more computing power.
 - Sequential and parallel transaction processing. The simplified systems with sequential ordering of transactions like Ethereum introduce problems like MEV and poor horizontal scaling. Parallel processing can solve them, but it is much more complex.
-- [Sharding in Ethereum](https://vitalik.ca/general/2021/04/07/sharding.html).
+- [Sharding in Ethereum](https://vitalik.eth.limo/general/2021/04/07/sharding.html).
 - The main limitations of the TPS are CPU, bandwidth, and memory.
 
 Layer 2 solutions can be done with different approaches:
@@ -184,7 +184,9 @@ Check out one of my posts: https://hey.xyz/posts/0x8218-0x0280-DA-b047fd5f
 Today, we continued the previous talk about the underlying math, perhaps the most challenging part of ZKP.
 
 Two good resources:
+
 https://www.rareskills.io/post/set-theory
+
 https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic
 
 Also, check out one of my previous posts:
@@ -237,7 +239,9 @@ Rust is a very popular language in the ZKP space, because of its core features:
 - Abstraction without overhead
 
 Check these two books to learn Rust:
+
 https://google.github.io/comprehensive-rust/
+
 https://doc.rust-lang.org/book
 
 Many projects like StarkNet and Aztec use Rust-like languages to program smart contracts (circuits).
@@ -255,7 +259,7 @@ Check out more on L2Beat: https://l2beat.com/scaling/summary
 Back in 2020, we ran monolithic rollups but later realized they could be separated into several layers:
 
 ![OP Stack](media/opstack.png)
-Check each layer here: https://stack.optimism.io/docs/understand/landscape/
+Check each layer here: https://docs.optimism.io/stack/components
 
 - We usually use Ethereum to store data for DA because it has established security, but we're not limited in this regard. We can use a different storage, but it'll have other security assumptions.
 - The Sequencing layer defines the collection of user transactions and their publication to the DA layer.
@@ -280,7 +284,9 @@ Currently, there are only two rollups on Stage 2 (Fuel and DeGate), and the most
 More Rust things like traits, generics, vectors, iterators, and shadowing.
 
 On the previous day, we concentrated on OP Stack, but it is only fair to mention ZK Stack by zkSync and Madara by StarkNet:
+
 https://blog.matter-labs.io/introducing-the-zk-stack-c24240c2532a
+
 https://starkware.co/resource/harnessing-the-beast-madara-and-the-revolution-of-starknet-appchains/
 
 Generally speaking, L2s follow a similar design.
@@ -340,7 +346,7 @@ Different kinds of SNARKs:
 The last one seems like an obvious choice, but universality or transparency comes with a big drawback in the form of worse proof size and verification time, and these two parameters are essential. 
 
 General process of SNARK system creation:
-1. Write a program in DSL (Kairo, Noir) or other language (Rust libraries)
+1. Write a program in DSL (Cairo, Noir) or other language (Rust libraries)
 2. Represent it as an arithmetic circuit (R1CS)
 3. Convert it to a polynomial or some kind of relation that acts similar
 4. Make it non-interactive
@@ -418,7 +424,7 @@ A zkEVM is a virtual machine in the form of a ZK circuit designed to emulate EVM
 
 While full compatibility with Ethereum is what most developers desire, in reality, this comes with a huge drawback in the form of higher complexity of the circuit and fewer final benefits like the throughput and fees on L2. Many L2 that implement zkEVM usually set some boundaries on the level of compatibility.
 
-Visual representation of the said above [by Vitalik Buterin](https://vitalik.ca/general/2022/08/04/zkevm.html):
+Visual representation of the said above [by Vitalik Buterin](https://vitalik.eth.limo/general/2022/08/04/zkevm.html):
 ![Compatibility vs Performance](media/compvsperf.png)
 
 Remember [the picture](#day-3) with the EVM architecture? It defines the elements that a zkEVM has to emulate: Stack, Memory, and Storage plus contexts like gas counter, program counter, etc.
